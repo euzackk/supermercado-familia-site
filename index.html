@@ -1,132 +1,199 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Supermercado Família</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Supermercado Família - Entrega Rápida em Porto Velho</title>
+    <meta name="description" content="Supermercado Família - Seu mercado de confiança em Porto Velho/RO. Entregamos em toda a cidade com qualidade e preços baixos.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
+    
     <header>
-        <div class="top-bar">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="Supermercado Família">
-            </div>
-            
-            <div class="search-box">
-                <input type="text" placeholder="O que você procura hoje?">
-                <button><i class="fa-solid fa-search"></i></button>
-            </div>
-
-            <div class="user-actions">
-                <a href="#"><i class="fa-solid fa-user"></i> Minha Conta</a>
-                <a href="#" class="cart-btn"><i class="fa-solid fa-shopping-cart"></i></a>
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-left">
+                    <span><i class="fas fa-clock"></i> Seg-Sáb: 6h-20h | Dom: 6h-12h</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Porto Velho/RO</span>
+                </div>
+                <div class="header-top-right">
+                    <span>Siga-nos:</span>
+                    <div class="social-links">
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="login-link">
+                        <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#">Açougue</a></li>
-                <li><a href="#">Hortifrúti</a></li>
-                <li><a href="#">Bebidas</a></li>
-                <li><a href="#">Limpeza</a></li>
-                <li><a href="#">Padaria</a></li>
-                <li><a href="#">Utilidades</a></li>
-            </ul>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/images/logo.png" alt="Supermercado Família Logo" class="logo-img">
+                    </a>
+                </div>
+                
+                <div class="search-box-v2">
+                    <input type="text" id="search-input" placeholder="O que você procura hoje? (Ex: Arroz, Leite, Cerveja)" aria-label="Caixa de pesquisa de produtos">
+                    <button id="search-button" aria-label="Pesquisar"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="floating-cart-toggle" id="floating-cart-toggle" role="button" tabindex="0" aria-label="Ver carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count-badge" id="cart-count-badge">0</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header-nav" id="header-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="#alimentos">Alimentos Básicos</a></li>
+                    <li><a href="#frios">Frios e Laticínios</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#limpeza">Limpeza</a></li>
+                    <li><a href="#higiene">Higiene Pessoal</a></li>
+                    <li><a href="#hortifruti">Hortifrúti</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-
-    <div class="container">
-        <aside class="sidebar">
-            <h3>Departamentos</h3>
-            <ul>
-                <li><a href="#">Hortifrúti</a></li>
-                <li><a href="#">Padaria</a></li>
-                <li><a href="#">Carnes e Aves</a></li>
-                <li><a href="#">Bebidas</a></li>
-                <li><a href="#">Laticínios</a></li>
-                <li><a href="#">Mercearia</a></li>
-                <li><a href="#">Limpeza</a></li>
-                <li><a href="#">Higiene Pessoal</a></li>
-            </ul>
+    
+    <main class="main-content">
+        <div class="container">
             
-            <div class="ad-banner-small">
-                <p>Folheto de Ofertas</p>
-                <button>Ver Agora</button>
-            </div>
-        </aside>
-
-        <main class="content">
-            <section class="hero-banner">
-                <div class="hero-text">
-                    <h2>OFERTAS <br>DA SEMANA!</h2>
-                    <p>Frescor e Economia!</p>
+            <section class="hero-banner-v2" aria-label="Ofertas em destaque">
+                <div class="hero-text-v2">
+                    <h1>OFERTAS DA SEMANA!</h1>
+                    <p>Frescor, Qualidade e Preços Baixos!</p>
+                    <button class="btn-primary-v2">Ver Produtos</button>
                 </div>
-                <img src="https://via.placeholder.com/400x200?text=Legumes+Frescos" alt="Ofertas">
+                <div class="hero-image-v2">
+                    <img src="https://via.placeholder.com/450x250?text=Mega+Oferta" alt="Cesta de produtos frescos" loading="lazy">
+                </div>
             </section>
 
-            <div class="section-title">
-                <h3>Mais Vendidos</h3>
-            </div>
+            <section class="checkout-steps" id="checkout-steps" aria-label="Processo de Finalização de Compra">
+                </section>
 
-            <section class="product-grid">
+            <section class="product-list-section" id="product-list-section" aria-label="Lista de Produtos do Supermercado">
                 
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/150?text=Banana" alt="Banana">
-                    <h4>Banana Prata</h4>
-                    <p class="brand">kg</p>
-                    <div class="price">R$ 7,99</div>
-                    <button class="add-btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                <div class="product-category" id="alimentos">
+                    <div class="category-header">
+                        <i class="fas fa-bread-slice"></i>
+                        <h2>Alimentos Básicos</h2>
+                    </div>
+                    <div class="product-grid-v2" id="grid-alimentos">
+                        </div>
                 </div>
 
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/150?text=Leite" alt="Leite">
-                    <h4>Leite Integral</h4>
-                    <p class="brand">Caixa 1L</p>
-                    <div class="price">R$ 4,99</div>
-                    <button class="add-btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                <div class="product-category" id="frios">
+                    <div class="category-header">
+                        <i class="fas fa-cheese"></i>
+                        <h2>Frios e Laticínios</h2>
+                    </div>
+                    <div class="product-grid-v2" id="grid-frios"></div>
                 </div>
 
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/150?text=Cafe" alt="Café">
-                    <h4>Café Torrado</h4>
-                    <p class="brand">500g</p>
-                    <div class="price">R$ 18,90</div>
-                    <button class="add-btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                <div class="product-category" id="limpeza">
+                    <div class="category-header">
+                        <i class="fas fa-spray-can"></i>
+                        <h2>Limpeza</h2>
+                    </div>
+                    <div class="product-grid-v2" id="grid-limpeza"></div>
                 </div>
 
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/150?text=Tapioca" alt="Tapioca">
-                    <h4>Goma de Tapioca</h4>
-                    <p class="brand">Pacote 1kg</p>
-                    <div class="price">R$ 10,99</div>
-                    <button class="add-btn"><i class="fa-solid fa-cart-plus"></i> Adicionar</button>
+                <div class="product-category" id="bebidas">
+                    <div class="category-header">
+                        <i class="fas fa-beer"></i>
+                        <h2>Bebidas</h2>
+                    </div>
+                    <div class="product-grid-v2" id="grid-bebidas"></div>
                 </div>
 
             </section>
-        </main>
+        </div>
+    </main>
+
+    <div class="floating-cart" id="floating-cart" aria-modal="true" role="dialog" aria-labelledby="floating-cart-title">
+        <div class="floating-cart-header">
+            <h3 id="floating-cart-title"><i class="fas fa-shopping-cart"></i> Meu Carrinho</h3>
+            <button class="close-btn" id="floating-cart-close" aria-label="Fechar carrinho"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="floating-cart-body" id="floating-cart-body">
+            </div>
+        
+        <div class="floating-cart-footer">
+            <div class="floating-cart-total-info">
+                <span>Total (com taxa de entrega):</span>
+                <span class="floating-cart-total" id="floating-cart-total">R$ 0,00</span>
+            </div>
+            <button class="btn-primary-v2" id="checkout-button">
+                Finalizar Compra <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn-danger-v2" id="clear-cart-btn" disabled>
+                Limpar Carrinho
+            </button>
+        </div>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <div>
-                <h4>Nossas Lojas</h4>
-                <a href="#">Encontre uma loja</a>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-section footer-contact">
+                    <a href="index.html" class="logo-link">
+                         <img src="assets/images/logo.png" alt="Supermercado Família Logo" class="logo-img-footer">
+                    </a>
+                    <p>
+                        A sua melhor opção em compras online em Porto Velho. Frescor e qualidade na sua casa.
+                    </p>
+                    <p><i class="fas fa-phone"></i> (69) 9999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@supermercadofamilia.com.br</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-th-list" aria-hidden="true"></i> Categorias</h3>
+                    <ul>
+                        <li><a href="#alimentos"><i class="fas fa-chevron-right" aria-hidden="true"></i> Alimentos Básicos</a></li>
+                        <li><a href="#frios"><i class="fas fa-chevron-right" aria-hidden="true"></i> Frios e Laticínios</a></li>
+                        <li><a href="#bebidas"><i class="fas fa-chevron-right" aria-hidden="true"></i> Bebidas</a></li>
+                        <li><a href="#limpeza"><i class="fas fa-chevron-right" aria-hidden="true"></i> Limpeza</a></li>
+                        <li><a href="#higiene"><i class="fas fa-chevron-right" aria-hidden="true"></i> Higiene Pessoal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-info-circle" aria-hidden="true"></i> Informações</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Sobre nós</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Política de entrega</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Política de privacidade</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Termos de uso</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Trabalhe conosco</a></li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h4>Trabalhe Conosco</h4>
-                <a href="#">Envie seu currículo</a>
-            </div>
-            <div class="payment-methods">
-                <span>Aceitamos:</span>
-                <i class="fa-brands fa-cc-visa"></i>
-                <i class="fa-brands fa-cc-mastercard"></i>
-                <i class="fa-brands fa-pix"></i>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Supermercado Família LTDA. Todos os direitos reservados.</p>
+                <p>Preços sujeitos a alteração sem aviso prévio. Estoque limitado.</p>
             </div>
         </div>
     </footer>
-
+    
+    <div class="notification-toast" id="notification-toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <i class="fas fa-check-circle" aria-hidden="true"></i>
+        <span id="toast-message">Produto adicionado ao carrinho!</span>
+    </div>
+    
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
