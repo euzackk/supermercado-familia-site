@@ -21,8 +21,8 @@
                 <div class="header-top-right">
                     <span>Siga-nos:</span>
                     <div class="social-links">
-                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/supermercadofamiliapvh/?locale=pt_BR" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/supermercadofamiliapvh?igsh=MW55Yjd3cGh0aThnbQ==" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                     <div class="login-link">
                         <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
@@ -72,15 +72,18 @@
                 <div class="hero-text-v2">
                     <h1>OFERTAS DA SEMANA!</h1>
                     <p>Frescor, Qualidade e Preços Baixos!</p>
-                    <button class="btn-primary-v2">Ver Produtos</button>
+                    <button class="btn-primary-v2" id="ver-produtos-btn">Ver Produtos</button>
                 </div>
                 <div class="hero-image-v2">
                     <img src="https://via.placeholder.com/450x250?text=Mega+Oferta" alt="Cesta de produtos frescos" loading="lazy">
                 </div>
             </section>
 
-            <section class="checkout-steps" id="checkout-steps" aria-label="Processo de Finalização de Compra">
+            <div class="checkout-container">
+                <section class="checkout-steps" id="checkout-steps" aria-label="Processo de Finalização de Compra">
+                    <!-- Conteúdo gerado dinamicamente pelo JavaScript -->
                 </section>
+            </div>
 
             <section class="product-list-section" id="product-list-section" aria-label="Lista de Produtos do Supermercado">
                 
@@ -90,7 +93,8 @@
                         <h2>Alimentos Básicos</h2>
                     </div>
                     <div class="product-grid-v2" id="grid-alimentos">
-                        </div>
+                        <!-- Produtos serão gerados pelo JavaScript -->
+                    </div>
                 </div>
 
                 <div class="product-category" id="frios">
@@ -117,6 +121,30 @@
                     <div class="product-grid-v2" id="grid-bebidas"></div>
                 </div>
 
+                <div class="product-category" id="higiene">
+                    <div class="category-header">
+                        <i class="fas fa-soap"></i>
+                        <h2>Higiene Pessoal</h2>
+                    </div>
+                    <div class="product-grid-v2" id="grid-higiene"></div>
+                </div>
+
+                <div class="product-category" id="hortifruti">
+                    <div class="category-header">
+                        <i class="fas fa-apple-alt"></i>
+                        <h2>Hortifrúti</h2>
+                    </div>
+                    <div class="product-grid-v2" id="grid-hortifruti"></div>
+                </div>
+
+                <div class="product-category" id="carnes">
+                    <div class="category-header">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <h2>Carnes e Enlatados</h2>
+                    </div>
+                    <div class="product-grid-v2" id="grid-carnes"></div>
+                </div>
+
             </section>
         </div>
     </main>
@@ -128,7 +156,8 @@
         </div>
         
         <div class="floating-cart-body" id="floating-cart-body">
-            </div>
+            <!-- Itens do carrinho serão gerados aqui -->
+        </div>
         
         <div class="floating-cart-footer">
             <div class="floating-cart-total-info">
@@ -155,8 +184,12 @@
                     <p>
                         A sua melhor opção em compras online em Porto Velho. Frescor e qualidade na sua casa.
                     </p>
-                    <p><i class="fas fa-phone"></i> (69) 9999-9999</p>
-                    <p><i class="fas fa-envelope"></i> contato@supermercadofamilia.com.br</p>
+                    <p><i class="fas fa-phone"></i> (69) 99255-7719</p>
+                    <p><i class="fas fa-envelope"></i> dafamiliasuper@gmail.com</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/supermercadofamiliapvh/?locale=pt_BR" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/supermercadofamiliapvh?igsh=MW55Yjd3cGh0aThnbQ==" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-section">
