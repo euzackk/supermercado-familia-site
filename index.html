@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado Família - Entrega Rápida em Porto Velho</title>
+    <meta name="description" content="Supermercado Família - Seu mercado de confiança em Porto Velho/RO. Entregamos em toda a cidade com qualidade e preços baixos.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <img src="assets/images/logo.png" alt="Supermercado Família Logo" class="logo-img">
+                    </a>
+                </div>
+                
+                <div class="search-box-v2">
+                    <input type="text" id="search-input" placeholder="O que você procura hoje?" aria-label="Caixa de pesquisa de produtos">
+                    <button id="search-button" aria-label="Pesquisar"><i class="fas fa-search"></i></button>
+                </div>
+
+                <div class="floating-cart-toggle" id="floating-cart-toggle" role="button" tabindex="0" aria-label="Ver carrinho">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count-badge" id="cart-count-badge">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-top-bar">
+            <div class="container">
+                <div class="header-top-left">
+                    <span><i class="fas fa-clock"></i> Seg-Sáb: 6h-20h | Dom: 6h-12h</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Porto Velho/RO</span>
+                </div>
+                <div class="header-top-right">
+                    <span>Siga-nos:</span>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/supermercadofamiliapvh/?locale=pt_BR" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/supermercadofamiliapvh?igsh=MW55Yjd3cGh0aThnbQ==" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="login-link">
+                        <a href="#"><i class="fas fa-user"></i> Minha Conta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="header-nav" id="header-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="#alimentos">Alimentos</a></li>
+                    <li><a href="#frios">Frios</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                    <li><a href="#limpeza">Limpeza</a></li>
+                    <li><a href="#higiene">Higiene</a></li>
+                    <li><a href="#hortifruti">Hortifrúti</a></li>
+                    <li><a href="#" onclick="showAllCategories()">Todas Categorias</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Hero Banner -->
+            <section class="hero-banner-v2" aria-label="Ofertas em destaque" id="hero-banner">
+                <div class="hero-text-v2">
+                    <h1>MAIS DE 9.000 PRODUTOS!</h1>
+                    <p>Tudo que você precisa com entrega rápida</p>
+                    <button class="btn-primary-v2" id="ver-produtos-btn">Ver Produtos</button>
+                </div>
+                <div class="hero-image-v2">
+                    <img src="https://images.unsplash.com/photo-1606859190975-3dab5be5d34b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cesta de produtos frescos" loading="lazy">
+                </div>
+            </section>
+
+            <!-- Filtros Rápidos -->
+            <div class="quick-filters" id="quick-filters">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">
+                        <i class="fas fa-th"></i> Todos
+                    </button>
+                    <button class="filter-btn" data-category="alimentos">
+                        <i class="fas fa-bread-slice"></i> Alimentos
+                    </button>
+                    <button class="filter-btn" data-category="bebidas">
+                        <i class="fas fa-beer"></i> Bebidas
+                    </button>
+                    <button class="filter-btn" data-category="limpeza">
+                        <i class="fas fa-spray-can"></i> Limpeza
+                    </button>
+                    <button class="filter-btn" data-category="higiene">
+                        <i class="fas fa-soap"></i> Higiene
+                    </button>
+                </div>
+                <div class="filter-options">
+                    <select id="sort-select" aria-label="Ordenar produtos">
+                        <option value="name-asc">Nome (A-Z)</option>
+                        <option value="name-desc">Nome (Z-A)</option>
+                        <option value="price-asc">Preço (menor)</option>
+                        <option value="price-desc">Preço (maior)</option>
+                    </select>
+                    <input type="number" id="price-min" placeholder="Preço mínimo" aria-label="Preço mínimo">
+                    <input type="number" id="price-max" placeholder="Preço máximo" aria-label="Preço máximo">
+                    <button id="apply-filters" class="btn-primary-v2 small">Aplicar</button>
+                </div>
+            </div>
+
+            <!-- Contador de Produtos -->
+            <div class="products-counter" id="products-counter">
+                <span id="products-count">Carregando produtos...</span>
+                <div class="search-stats">
+                    <span id="search-time">0ms</span>
+                    <span id="visible-products">0 visíveis</span>
+                </div>
+            </div>
+
+            <div class="checkout-container">
+                <section class="checkout-steps" id="checkout-steps" aria-label="Processo de Finalização de Compra">
+                    <!-- Conteúdo gerado dinamicamente pelo JavaScript -->
+                </section>
+            </div>
+
+            <section class="product-list-section" id="product-list-section" aria-label="Lista de Produtos do Supermercado">
+                <!-- Loading Indicator -->
+                <div class="loading-container" id="loading-container">
+                    <div class="loading-spinner"></div>
+                    <p>Carregando produtos...</p>
+                </div>
+            </section>
+
+            <!-- Botão Carregar Mais -->
+            <div class="load-more-container" id="load-more-container">
+                <button class="load-more-btn" id="load-more-btn">
+                    <i class="fas fa-plus"></i> Carregar Mais Produtos
+                </button>
+                <div class="pagination-info" id="pagination-info">
+                    Mostrando <span id="shown-count">0</span> de <span id="total-count">0</span> produtos
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="floating-cart" id="floating-cart" aria-modal="true" role="dialog" aria-labelledby="floating-cart-title">
+        <div class="floating-cart-header">
+            <h3 id="floating-cart-title"><i class="fas fa-shopping-cart"></i> Meu Carrinho</h3>
+            <button class="close-btn" id="floating-cart-close" aria-label="Fechar carrinho"><i class="fas fa-times"></i></button>
+        </div>
+        
+        <div class="floating-cart-body" id="floating-cart-body">
+            <!-- Itens do carrinho serão gerados aqui -->
+        </div>
+        
+        <div class="floating-cart-footer">
+            <div class="floating-cart-total-info">
+                <span>Total (com taxa de entrega):</span>
+                <span class="floating-cart-total" id="floating-cart-total">R$ 0,00</span>
+            </div>
+            <button class="btn-primary-v2" id="checkout-button">
+                Finalizar Compra <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn-danger-v2" id="clear-cart-btn" disabled>
+                Limpar Carrinho
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-section footer-contact">
+                    <a href="index.html" class="logo-link">
+                         <img src="assets/images/logo.png" alt="Supermercado Família Logo" class="logo-img-footer">
+                    </a>
+                    <p>
+                        A sua melhor opção em compras online em Porto Velho. Frescor e qualidade na sua casa.
+                    </p>
+                    <p><i class="fas fa-phone"></i> (69) 99255-7719</p>
+                    <p><i class="fas fa-envelope"></i> dafamiliasuper@gmail.com</p>
+                    <div class="footer-social-links">
+                        <a href="https://www.facebook.com/supermercadofamiliapvh/?locale=pt_BR" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/supermercadofamiliapvh?igsh=MW55Yjd3cGh0aThnbQ==" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-th-list" aria-hidden="true"></i> Categorias</h3>
+                    <ul>
+                        <li><a href="#alimentos"><i class="fas fa-chevron-right"></i> Alimentos Básicos</a></li>
+                        <li><a href="#frios"><i class="fas fa-chevron-right"></i> Frios e Laticínios</a></li>
+                        <li><a href="#bebidas"><i class="fas fa-chevron-right"></i> Bebidas</a></li>
+                        <li><a href="#limpeza"><i class="fas fa-chevron-right"></i> Limpeza</a></li>
+                        <li><a href="#higiene"><i class="fas fa-chevron-right"></i> Higiene Pessoal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-info-circle" aria-hidden="true"></i> Informações</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Sobre nós</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de entrega</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de privacidade</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Termos de uso</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Trabalhe conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Supermercado Família LTDA. Todos os direitos reservados.</p>
+                <p>Preços sujeitos a alteração sem aviso prévio. Estoque limitado.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="notification-toast" id="notification-toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <i class="fas fa-check-circle" aria-hidden="true"></i>
+        <span id="toast-message">Produto adicionado ao carrinho!</span>
+    </div>
+    
+    <!-- Botão Admin para Recarregar Produtos -->
+    <button class="admin-tools-btn" id="admin-tools-btn" title="Ferramentas de Administração">
+        <i class="fas fa-tools"></i>
+    </button>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
